@@ -120,7 +120,7 @@ npm run start
 issue, PR どちらも大歓迎です。
 
 ## 謝辞
-PlatformIOコミュニティ、UIAPduinoコミュニティ、Nostrコミュニティ、platform-ch32v開発者、Misskey開発者等、本プロジェクトに関わるあらゆる技術者、リソースに感謝します。
+PlatformIOコミュニティ、UIAPduinoコミュニティ、Nostrコミュニティ、Misskeyコミュニティ、platform-ch32vコミュニティ等、本プロジェクトに関わるあらゆる方々、リソースに感謝します。
 
 ## リンク集
 - UIAPduino公式 https://www.uiap.jp/
