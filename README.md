@@ -87,6 +87,7 @@ pio run --target upload --environment genericCH32V003F4P6
 ```
 cd ../
 cd misskey_nostr_notifier_node
+npm install
 touch config.yml
 ```
 
@@ -117,6 +118,9 @@ npm run start
 
 ## コントリビュート
 issue, PR どちらも大歓迎です。
+
+## 謝辞
+PlatformIOコミュニティ、UIAPduinoコミュニティ、Nostrコミュニティ、platform-ch32v開発者、Misskey開発者等、本プロジェクトに関わるあらゆる技術者、リソースに感謝します。
 
 ## リンク集
 - UIAPduino公式 https://www.uiap.jp/
