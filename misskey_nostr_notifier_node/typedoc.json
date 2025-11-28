@@ -1,0 +1,11 @@
+{
+    "entryPoints": [
+        "./src"
+    ],
+    "entryPointStrategy": "expand",
+    "out": "docs",
+    "name": "misskey_nostr_notifier",
+    "readme": "../README.md",
+    "includeVersion": true,
+    "excludePrivate": true
+}

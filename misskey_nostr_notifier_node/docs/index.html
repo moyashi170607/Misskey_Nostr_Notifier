@@ -1,0 +1,75 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>misskey_nostr_notifier - v1.0.0</title><meta name="description" content="Documentation for misskey_nostr_notifier"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">misskey_nostr_notifier - v1.0.0</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>misskey_nostr_notifier - v1.0.0</h1></div><div class="tsd-panel tsd-typography"><h1 id="misskey_nostr_notifier" class="tsd-anchor-link">Misskey_Nostr_Notifier<a href="#misskey_nostr_notifier" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><h2 id="概要" class="tsd-anchor-link">概要<a href="#概要" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Misskey_Nostr_Notifierは、Arudino互換機である<strong>UIAPduino</strong>とNode.jsを用いたMisskeyとNostrの通知を検知するデバイス、プログラムです。</p>
+<p>Misskeyの通知を受け取るとLEDが緑色に、Nostrの通知を受け取ると紫色に光ります。<br>
+また、パッシブブザーの音でも知らせます。</p>
+<h3 id="対応している通知" class="tsd-anchor-link">対応している通知<a href="#対応している通知" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><h4 id="misskey" class="tsd-anchor-link">Misskey<a href="#misskey" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4><p>通知として届くもの全て</p>
+<h3 id="nostr" class="tsd-anchor-link">Nostr<a href="#nostr" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>対応しているイベントのkind<br>
+ただし、投稿のpタグに自身の公開鍵が含まれてる必要あり</p>
+<ul>
+<li>1 投稿内のメンション</li>
+<li>4 DM(NIP-04)</li>
+<li>6 リポスト</li>
+<li>7 リアクション</li>
+<li>8 バッジの授与</li>
+<li>16 汎用リポスト</li>
+<li>42 チャンネルメッセージ</li>
+<li>1059 DM(NIP-17)</li>
+<li>9735 Zap</li>
+<li>30023 長文投稿</li>
+</ul>
+<h2 id="misskey_nostr_notifier_node" class="tsd-anchor-link">misskey_nostr_notifier_node<a href="#misskey_nostr_notifier_node" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>このフォルダにはNode.js上で動くプログラムが含まれています。<br>
+またフォルダ内のdocsには、プログラムについてのドキュメントがあります。</p>
+<h2 id="misskey_nostr_notifier_uiap" class="tsd-anchor-link">misskey_nostr_notifier_uiap<a href="#misskey_nostr_notifier_uiap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>このフォルダにはハードウェアに関するプログラムが含まれています。</p>
+<h2 id="環境構築" class="tsd-anchor-link">環境構築<a href="#環境構築" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="ハードウェア" class="tsd-anchor-link">ハードウェア<a href="#ハードウェア" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>UIAPduino Pro Micro CH32V003 V1.4</li>
+<li>USBシリアル変換モジュール (CH340E)</li>
+<li>platformIO Core 6.1.18·Home 3.4.4</li>
+<li>platform-ch32v <a href="https://github.com/Community-PIO-CH32V/platform-ch32v">https://github.com/Community-PIO-CH32V/platform-ch32v</a></li>
+</ul>
+<p>その他は回路図や<code>platform.ini</code>を参照</p>
+<h3 id="ソフトウェア" class="tsd-anchor-link">ソフトウェア<a href="#ソフトウェア" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>Node.js v24.11.1</li>
+</ul>
+<p>その他は<code>package.json</code>および<code>package-lock.json</code>を参照</p>
+<h3 id="デバイスの回路図例" class="tsd-anchor-link">デバイスの回路図例<a href="#デバイスの回路図例" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><image src="img/notifier_circuit.png">
+<img src="media/MN_notifier.jpg">
+<h2 id="セットアップ" class="tsd-anchor-link">セットアップ<a href="#セットアップ" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="ハードウェア-1" class="tsd-anchor-link">ハードウェア<a href="#ハードウェア-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code><span class="hl-0">git</span><span class="hl-1"> </span><span class="hl-0">clone</span><span class="hl-1"> </span><span class="hl-2">https</span><span class="hl-1">:</span><span class="hl-3">//github.com/moyashi170607/Misskey_Nostr_Notifier.git</span>
+</code><button>Copy</button></pre>
+
+<p>まずはデバイスのセットアップについて説明します。<br>
+先述の回路図や写真をもとにデバイスを作成してください。</p>
+<p>その後、次のコマンドを入力してください。</p>
+<pre><code><span class="hl-0">cd</span><span class="hl-1"> </span><span class="hl-0">misskey_nostr_notifier_uiap</span>
+</code><button>Copy</button></pre>
+
+<p><code>src/main.c</code>に、プログラムが書かれています。
+必要に応じてLEDやブザーのピンの番号などを変更してください。</p>
+<p>各種platformIOの設定はUIAPduinoに合わせて設定されています。
+必要に応じて変更してください。</p>
+<p>マイコンを情報線のあるケーブルなどを用いてUSBポートに書き込みモードで接続し、以下のコマンドを実行してください<br>
+(誤ってシリアル通信デバイス側のUSBソケットに接続しないように注意してください)</p>
+<pre><code><span class="hl-0">pio</span><span class="hl-1"> </span><span class="hl-0">run</span><span class="hl-1"> --</span><span class="hl-0">target</span><span class="hl-1"> </span><span class="hl-0">upload</span><span class="hl-1"> --</span><span class="hl-0">environment</span><span class="hl-1"> </span><span class="hl-0">genericCH32V003F4P6</span>
+</code><button>Copy</button></pre>
+
+<p>書き込みが成功すれば、無事ハードウェアのセットアップは完了です。</p>
+<h3 id="ソフトウェア-1" class="tsd-anchor-link">ソフトウェア<a href="#ソフトウェア-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code><span class="hl-0">cd</span><span class="hl-1"> ../</span><br/><span class="hl-0">cd</span><span class="hl-1"> </span><span class="hl-0">misskey_nostr_notifier_node</span><br/><span class="hl-0">touch</span><span class="hl-1"> </span><span class="hl-0">config</span><span class="hl-1">.</span><span class="hl-0">yml</span>
+</code><button>Copy</button></pre>
+
+<p>その後、以下のファイルを編集してください</p>
+<h4 id="configyml" class="tsd-anchor-link">config.yml<a href="#configyml" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code><span class="hl-2">PK_HEX</span><span class="hl-1">: </span><span class="hl-0">あなたのNostr公開鍵</span><span class="hl-1">（</span><span class="hl-0">HEX形式</span><span class="hl-1">）</span><br/><span class="hl-2">RELAY</span><span class="hl-1">:</span><br/><span class="hl-1">  - </span><span class="hl-0">リレーサーバーのWebSocketのURL1</span><br/><span class="hl-1">  - </span><span class="hl-4">URL2</span><br/><span class="hl-1">  - </span><span class="hl-4">URL3</span><br/><br/><span class="hl-2">MISSKEY_ORIGIN</span><span class="hl-1">: </span><span class="hl-5">接続するMisskeyインスタンスのオリジン</span><span class="hl-1">(</span><span class="hl-4">URL</span><span class="hl-1">)</span><br/><span class="hl-2">MISSKEY_API</span><span class="hl-1">: </span><span class="hl-0">あなたのMisskeyアカウントAPIキー</span><br/><br/><span class="hl-2">PORT</span><span class="hl-1">: </span><span class="hl-0">マイコンを接続するポート</span>
+</code><button>Copy</button></pre>
+
+<p>これらの設定が済んだら、デバイスのUSBシリアル変換モジュールのUSBソケットにプラグを差し込みパソコンと接続してください。</p>
+<p>その後、以下のコマンドを実行しましょう。</p>
+<pre><code><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-0">run</span><span class="hl-1"> </span><span class="hl-0">start</span>
+</code><button>Copy</button></pre>
+
+<p>無事シリアル通信が確立し、各種サーバーとの接続が確認出来たら成功です。</p>
+<h2 id="コントリビュート" class="tsd-anchor-link">コントリビュート<a href="#コントリビュート" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>issue, PR どちらも大歓迎です。</p>
+<h2 id="リンク集" class="tsd-anchor-link">リンク集<a href="#リンク集" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<li>UIAPduino公式 <a href="https://www.uiap.jp/">https://www.uiap.jp/</a></li>
+<li>platform-ch32v <a href="https://github.com/Community-PIO-CH32V/platform-ch32v">https://github.com/Community-PIO-CH32V/platform-ch32v</a> <br>
+インストール手順
+<a href="https://pio-ch32v.readthedocs.io/en/latest/installation.html#install-platformio">https://pio-ch32v.readthedocs.io/en/latest/installation.html#install-platformio</a></li>
+</ul>
+<h2 id="ライセンス" class="tsd-anchor-link">ライセンス<a href="#ライセンス" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>このプロジェクトはMITライセンスの下でライセンスされています。詳細についてはLICENSEファイルを参照してください。</p>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#misskey_nostr_notifier"><span>Misskey_<wbr/>Nostr_<wbr/>Notifier</span></a><ul><li><a href="#概要"><span>概要</span></a></li><li><ul><li><a href="#対応している通知"><span>対応している通知</span></a></li><li><ul><li><a href="#misskey"><span>Misskey</span></a></li></ul></li><li><a href="#nostr"><span>Nostr</span></a></li></ul></li><li><a href="#misskey_nostr_notifier_node"><span>misskey_<wbr/>nostr_<wbr/>notifier_<wbr/>node</span></a></li><li><a href="#misskey_nostr_notifier_uiap"><span>misskey_<wbr/>nostr_<wbr/>notifier_<wbr/>uiap</span></a></li><li><a href="#環境構築"><span>環境構築</span></a></li><li><ul><li><a href="#ハードウェア"><span>ハードウェア</span></a></li><li><a href="#ソフトウェア"><span>ソフトウェア</span></a></li><li><a href="#デバイスの回路図例"><span>デバイスの回路図例</span></a></li></ul></li><li><a href="#セットアップ"><span>セットアップ</span></a></li><li><ul><li><a href="#ハードウェア-1"><span>ハードウェア</span></a></li><li><a href="#ソフトウェア-1"><span>ソフトウェア</span></a></li><li><ul><li><a href="#configyml"><span>config.yml</span></a></li></ul></li></ul></li><li><a href="#コントリビュート"><span>コントリビュート</span></a></li><li><a href="#リンク集"><span>リンク集</span></a></li><li><a href="#ライセンス"><span>ライセンス</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html">misskey_nostr_notifier - v1.0.0</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>
